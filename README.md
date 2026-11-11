@@ -1,4 +1,4 @@
-<img width="700" height="200" alt="image" src="https://github.com/user-attachments/assets/8ef91319-4dc4-4f25-ad09-b1a599b599d3" />
+<img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/8ef91319-4dc4-4f25-ad09-b1a599b599d3" />
 
 # Chrome-Console-Games
 A library of games that can be run in the chrome console with javascript.
