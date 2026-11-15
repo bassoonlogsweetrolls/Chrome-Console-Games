@@ -175,7 +175,7 @@ const GAMEKEYS = new Set(['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Sp
 // ───────────────────────── Estado global ─────────────────────────
 let G = null; // partido actual (o demo de fondo)
 const S = {
-  screen: 'load', loadT: 0, mode: '1p', sel: [0, 1], step: 0, row: 0, pauseRow: 0, helpBack: 'mode', endRow: 0,
+  screen: 'mode', loadT: 0, mode: '1p', sel: [0, 1], step: 0, row: 0, pauseRow: 0, helpBack: 'mode', endRow: 0,
   opt: { f: [0, 0], len: 1, diff: 1, pens: true, replay: true, sound: true },
   t: 0, last: null,
 };
