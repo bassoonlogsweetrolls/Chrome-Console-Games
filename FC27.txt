@@ -29,26 +29,26 @@ const pick = a => a[Math.floor(Math.random() * a.length)];
 // Liga de 20 clubes españoles ficticios (nombres, colores y escudos inventados)
 // f = formación preferida (índice en FORMS), sh = forma del escudo, sy = símbolo
 const TEAMS = [
-  { n: 'Real Alcázar',        s: 'ALC', c1: '#f8fafc', c2: '#6d28d9', pat: 'solid',   a: 89, m: 88, d: 84, g: 87, f: 1, sh: 'shield', sy: 'crown' },
-  { n: 'FC Mediterráneo',     s: 'MED', c1: '#1e3a8a', c2: '#be123c', pat: 'stripes', a: 88, m: 87, d: 82, g: 84, f: 1, sh: 'shield', sy: 'ball' },
-  { n: 'Atlético Meseta',     s: 'ATM', c1: '#d62828', c2: '#ffffff', pat: 'stripes', a: 85, m: 82, d: 87, g: 86, f: 0, sh: 'shield', sy: 'star' },
-  { n: 'Athletic Cantábrico', s: 'CAN', c1: '#15803d', c2: '#ffffff', pat: 'stripes', a: 80, m: 77, d: 80, g: 78, f: 0, sh: 'round',  sy: 'bar' },
-  { n: 'Costa Vasca CF',      s: 'CVA', c1: '#1d4ed8', c2: '#ffffff', pat: 'half',    a: 80, m: 81, d: 76, g: 77, f: 3, sh: 'shield', sy: 'cross' },
-  { n: 'Valle Amarillo',      s: 'VAM', c1: '#facc15', c2: '#1d4ed8', pat: 'solid',   a: 78, m: 77, d: 76, g: 75, f: 3, sh: 'shield', sy: 'chev' },
-  { n: 'Real Verdiblanco',    s: 'RVB', c1: '#16a34a', c2: '#ffffff', pat: 'hoops',   a: 77, m: 78, d: 73, g: 74, f: 1, sh: 'round',  sy: 'ball' },
-  { n: 'Turia FC',            s: 'TUR', c1: '#f8fafc', c2: '#111827', pat: 'solid',   a: 76, m: 75, d: 76, g: 77, f: 0, sh: 'shield', sy: 'star' },
-  { n: 'Real Rías',           s: 'RIA', c1: '#38bdf8', c2: '#ffffff', pat: 'solid',   a: 75, m: 74, d: 72, g: 74, f: 2, sh: 'round',  sy: 'cross' },
-  { n: 'Sierra Roja',         s: 'SRO', c1: '#b91c1c', c2: '#1e293b', pat: 'half',    a: 74, m: 72, d: 74, g: 73, f: 4, sh: 'shield', sy: 'chev' },
-  { n: 'Costa Brava FC',      s: 'CBR', c1: '#dc2626', c2: '#ffffff', pat: 'hoops',   a: 74, m: 73, d: 70, g: 72, f: 0, sh: 'shield', sy: 'star' },
-  { n: 'Racing Nuevo Puerto', s: 'RNP', c1: '#0ea5e9', c2: '#0f172a', pat: 'stripes', a: 69, m: 68, d: 68, g: 68, f: 0, sh: 'shield', sy: 'ball' },
-  { n: 'Deportivo Arenal',    s: 'ARE', c1: '#2563eb', c2: '#ffffff', pat: 'solid',   a: 72, m: 70, d: 74, g: 71, f: 4, sh: 'round',  sy: 'bar' },
-  { n: 'Unión Barrio Alto',   s: 'UBA', c1: '#f8fafc', c2: '#dc2626', pat: 'half',    a: 71, m: 72, d: 70, g: 70, f: 3, sh: 'shield', sy: 'cross' },
-  { n: 'Isla Dorada CF',      s: 'ISL', c1: '#b91c1c', c2: '#111111', pat: 'stripes', a: 70, m: 70, d: 72, g: 70, f: 0, sh: 'round',  sy: 'ball' },
-  { n: 'UD Islas Atlánticas', s: 'ISA', c1: '#fde047', c2: '#1d4ed8', pat: 'solid',   a: 70, m: 71, d: 66, g: 68, f: 1, sh: 'shield', sy: 'bar' },
-  { n: 'CD Montaña',          s: 'MON', c1: '#3b82f6', c2: '#ffffff', pat: 'stripes', a: 68, m: 68, d: 69, g: 68, f: 4, sh: 'round',  sy: 'chev' },
-  { n: 'CD Llobregat',        s: 'LLO', c1: '#1d4ed8', c2: '#ffffff', pat: 'hoops',   a: 67, m: 66, d: 68, g: 66, f: 0, sh: 'shield', sy: 'star' },
-  { n: 'Cuervos del Sur',     s: 'CSU', c1: '#0f766e', c2: '#ffffff', pat: 'half',    a: 66, m: 66, d: 66, g: 66, f: 2, sh: 'shield', sy: 'cross' },
-  { n: 'Real Pisuerga',       s: 'PIS', c1: '#7c3aed', c2: '#ffffff', pat: 'solid',   a: 65, m: 65, d: 66, g: 66, f: 3, sh: 'round',  sy: 'crown' },
+  { n: 'Real Madrid', s: 'RMA', c1: '#ffffff', c2: '#00529f', pat: 'solid',   a: 89, m: 88, d: 84, g: 87, f: 1, sh: 'shield', sy: 'crown' },
+  { n: 'FC Barcelona', s: 'FCB', c1: '#a50044', c2: '#004d98', pat: 'stripes', a: 88, m: 87, d: 82, g: 84, f: 1, sh: 'shield', sy: 'ball' },
+  { n: 'Atlético de Madrid', s: 'ATM', c1: '#cb3524', c2: '#ffffff', pat: 'stripes', a: 85, m: 82, d: 87, g: 86, f: 0, sh: 'shield', sy: 'star' },
+  { n: 'Athletic Club', s: 'ATH', c1: '#ee2523', c2: '#ffffff', pat: 'stripes', a: 80, m: 77, d: 80, g: 78, f: 0, sh: 'round',  sy: 'bar' },
+  { n: 'Real Sociedad', s: 'RSO', c1: '#0067b1', c2: '#ffffff', pat: 'stripes',    a: 80, m: 81, d: 76, g: 77, f: 3, sh: 'shield', sy: 'cross' },
+  { n: 'Villarreal CF', s: 'VIL', c1: '#fbe122', c2: '#005187', pat: 'solid',   a: 78, m: 77, d: 76, g: 75, f: 3, sh: 'shield', sy: 'chev' },
+  { n: 'Real Betis', s: 'BET', c1: '#0bb363', c2: '#ffffff', pat: 'stripes',   a: 77, m: 78, d: 73, g: 74, f: 1, sh: 'round',  sy: 'ball' },
+  { n: 'Sevilla FC', s: 'SEV', c1: '#ffffff', c2: '#d4011b', pat: 'solid',   a: 76, m: 75, d: 76, g: 77, f: 0, sh: 'shield', sy: 'star' },
+  { n: 'Valencia CF', s: 'VAL', c1: '#ffffff', c2: '#1a1a1a', pat: 'solid',   a: 75, m: 74, d: 72, g: 74, f: 2, sh: 'round',  sy: 'cross' },
+  { n: 'Girona FC', s: 'GIR', c1: '#cd2534', c2: '#ffffff', pat: 'stripes',    a: 74, m: 72, d: 74, g: 73, f: 4, sh: 'shield', sy: 'chev' },
+  { n: 'Celta de Vigo', s: 'CEL', c1: '#8ac3ee', c2: '#ffffff', pat: 'solid',   a: 74, m: 73, d: 70, g: 72, f: 0, sh: 'shield', sy: 'star' },
+  { n: 'CA Osasuna', s: 'OSA', c1: '#d91a21', c2: '#0a1f44', pat: 'solid', a: 69, m: 68, d: 68, g: 68, f: 0, sh: 'shield', sy: 'ball' },
+  { n: 'Getafe CF', s: 'GET', c1: '#005999', c2: '#ffffff', pat: 'solid',   a: 72, m: 70, d: 74, g: 71, f: 4, sh: 'round',  sy: 'bar' },
+  { n: 'Rayo Vallecano', s: 'RAY', c1: '#ffffff', c2: '#e53027', pat: 'solid',    a: 71, m: 72, d: 70, g: 70, f: 3, sh: 'shield', sy: 'cross' },
+  { n: 'RCD Mallorca', s: 'MLL', c1: '#e20613', c2: '#1a1a1a', pat: 'solid', a: 70, m: 70, d: 72, g: 70, f: 0, sh: 'round',  sy: 'ball' },
+  { n: 'Deportivo Alavés', s: 'ALA', c1: '#0761af', c2: '#ffffff', pat: 'stripes',   a: 70, m: 71, d: 66, g: 68, f: 1, sh: 'shield', sy: 'bar' },
+  { n: 'RCD Espanyol', s: 'ESP', c1: '#007fc8', c2: '#ffffff', pat: 'stripes', a: 68, m: 68, d: 69, g: 68, f: 4, sh: 'round',  sy: 'chev' },
+  { n: 'Elche CF', s: 'ELC', c1: '#ffffff', c2: '#00793d', pat: 'solid',   a: 67, m: 66, d: 68, g: 66, f: 0, sh: 'shield', sy: 'star' },
+  { n: 'Levante UD', s: 'LEV', c1: '#a8132c', c2: '#1c3f94', pat: 'stripes',    a: 66, m: 66, d: 66, g: 66, f: 2, sh: 'shield', sy: 'cross' },
+  { n: 'Real Oviedo', s: 'OVI', c1: '#1f4fa3', c2: '#ffffff', pat: 'solid',   a: 65, m: 65, d: 66, g: 66, f: 3, sh: 'round',  sy: 'crown' },
 ];
 const teamOvr = t => Math.round(t.a * 0.3 + t.m * 0.3 + t.d * 0.3 + t.g * 0.1);
 const teamStars = t => clamp(Math.round((2 + (teamOvr(t) - 66) / 22 * 3) * 2) / 2, 1.5, 5);
@@ -58,6 +58,30 @@ const SURN = ['Alvarenga','Brandt','Castellón','Duarte','Esquivel','Fontaine','
   'Kowal','Lemoine','Montero','Navarro','Okafor','Paredes','Quintana','Rinaldi','Sandoval','Tavares','Uriarte','Vidal',
   'Wagner','Yamada','Zubieta','Cárdenas','Delgado','Ferrer','Guzmán','Herrera','Iglesias','Lozano','Maldonado','Núñez',
   'Ortega','Pizarro','Reyes','Salazar','Torres','Valdés','Aranda','Bolaños','Cordero','Dávila','Escobar','Fuentes','Gallardo'];
+// Plantillas (nombres de los jugadores por puesto, por orden de titularidad)
+const ROSTER = {
+  RMA: { GK: 'Courtois,Lunin', DEF: 'Carvajal,Huijsen,Rüdiger,Carreras,Militão,Mendy,Alexander-Arnold', MID: 'Valverde,Tchouaméni,Bellingham,Camavinga,Güler,Mastantuono,Ceballos', FWD: 'Mbappé,Vinícius Jr.,Rodrygo,Endrick,Brahim' },
+  FCB: { GK: 'J. García,Szczęsny', DEF: 'Koundé,Cubarsí,Araujo,Balde,Eric García,Gerard Martín,Cancelo', MID: 'Pedri,De Jong,Gavi,Olmo,Casadó,Fermín,Bernal', FWD: 'Lewandowski,Raphinha,Lamine Yamal,Ferran Torres,Rashford' },
+  ATM: { GK: 'Oblak,Musso', DEF: 'Molina,Le Normand,Giménez,Hancko,Ruggeri,Lenglet,Pubill', MID: 'De Paul,Koke,Barrios,Llorente,Gallagher,Simeone,Baena', FWD: 'Griezmann,J. Álvarez,Sørloth,Raspadori,Almada' },
+  ATH: { GK: 'Unai Simón,Padilla', DEF: 'De Marcos,Paredes,Vivian,Yuri,Laporte,Gorosabel,Boiro', MID: 'Jauregizar,Galarreta,Sancet,Vesga,Prados,Rego,Unai Gómez', FWD: 'N. Williams,I. Williams,Guruzeta,Berenguer,Djaló' },
+  RSO: { GK: 'Remiro,Marrero', DEF: 'Aramburu,Zubeldia,Caleta-Car,Aihen,Elustondo,Jon Martín,Sergio Gómez', MID: 'Turrientes,Brais Méndez,Sučić,Zakharyan,Gorrotxategi,Carlos Soler,Barrenetxea', FWD: 'Oyarzabal,Kubo,Óskarsson,Barrenetxea,Guedes' },
+  VIL: { GK: 'Junior,Tenas', DEF: 'Mouriño,Rafa Marín,Foyth,Cardona,Pedraza,Veiga,Costa', MID: 'Parejo,Comesaña,Gueye,Moleiro,Buchanan,Pino,Pépé', FWD: 'Gerard Moreno,Mikautadze,Pépé,Ayoze,Oliver' },
+  BET: { GK: 'Valles,Adrián', DEF: 'Bellerín,Natan,Llorente,Bartra,Ricardo Rodríguez,Firpo,Sabaly', MID: 'Fornals,Lo Celso,Roca,Amrabat,Altimira,Isco,Pablo Fornals', FWD: 'Antony,Abde,Cucho,Vitor Roque,Bakambu' },
+  SEV: { GK: 'Vlachodimos,Nyland', DEF: 'Carmona,Marcão,Salas,Suazo,Badé,Pedrosa,Ramos', MID: 'Sow,Agoumé,Gudelj,Vargas,Mendy,Soumaré,Oso', FWD: 'Isaac Romero,Alexis Sánchez,Lukébakio,Ejuke,Peque' },
+  VAL: { GK: 'Dimitrievski,Mamardashvili', DEF: 'Correia,Tárrega,Cömert,Gayà,Foulquier,Copete,Cristhian Mosquera', MID: 'Guerra,Pepelu,Barrenechea,André Almeida,Rioja,Javi Guerra,Diego López', FWD: 'Hugo Duro,Sadiq,Ramazani,Danjuma,Umar' },
+  GIR: { GK: 'Gazzaniga,Juan Carlos', DEF: 'Arnau Martínez,Blind,Krejčí,Francés,Vitor Reis,Rincón,Juanpe', MID: 'Herrera,Ounahi,Van de Beek,Solís,Lemar,Iván Martín,Beltrán', FWD: 'Stuani,Tsygankov,Portu,Bryan Gil,Abel Ruiz' },
+  CEL: { GK: 'Radu,Villar', DEF: 'Mingueza,Starfelt,Carreira,Marcos Alonso,Javi Rodríguez,Manu Fernández,Alonso', MID: 'Beltrán,Moriba,Sotelo,Tapia,Swedberg,Hugo Álvarez,Bamba', FWD: 'Iago Aspas,Borja Iglesias,Larsen,Douvikas,Jutglà' },
+  OSA: { GK: 'Sergio Herrera,Aitor Fernández', DEF: 'Areso,Boyomo,Catena,Galán,Bretones,Herrando,Rosier', MID: 'Moncayola,Torró,Aimar Oroz,Moi Gómez,Muñoz,Iker Muñoz,Lucas Torró', FWD: 'Budimir,Raúl García,Rubén García,Zaragoza,Víctor Muñoz' },
+  GET: { GK: 'David Soria,Letáček', DEF: 'Djené,Duarte,Iglesias,Diego Rico,Nyom,Romero,Abqar', MID: 'Milla,Arambarri,Liso,Carles Pérez,Neyou,Sancris,Peter', FWD: 'Borja Mayoral,Uche,Satriano,Mitrović,Alderete' },
+  RAY: { GK: 'Batalla,Dani Cárdenas', DEF: 'Ratiu,Lejeune,Chavarría,Pacha Espino,Balliu,Mumin,Aridane', MID: 'Unai López,Pathé Ciss,Trejo,Valentín,De Frutos,Pedro Díaz,Óscar Valentín', FWD: 'Camello,Alemão,Isi Palazón,Embarba,Falcao' },
+  MLL: { GK: 'Greif,Bergström', DEF: 'Mojica,Valjent,Raíllo,Maffeo,Copete,Mateu Morey,Sergi Darder', MID: 'Samu Costa,Morlanes,Darder,Mascarell,Antonio Sánchez,Robert Navarro,Pablo Torre', FWD: 'Muriqi,Larin,Asano,Abdón Prats,Mateo Joseph' },
+  ALA: { GK: 'Sivera,Owono', DEF: 'Tenaglia,Parada,Abqar,Manu Sánchez,Diarra,Aleix Garrido,Jonny', MID: 'Guridi,Aleñá,Blanco,Ibáñez,Jordán,Pablo Ibáñez,Denis Suárez', FWD: 'Kike García,Carlos Vicente,Villalibre,Boyé,Toni Martínez' },
+  ESP: { GK: 'Dmitrović,Marko', DEF: 'El Hilali,Cabrera,Calero,Carlos Romero,Pol Lozano,Gómez,Kumbulla', MID: 'Expósito,Pol Lozano,Urko González,Brian Oliván,Antoniu Roca,Jofre,Pere Milla', FWD: 'Puado,Roberto,Jofre Carreras,Pere Milla,Véliz' },
+  ELC: { GK: 'Dituro,Badía', DEF: 'Núñez,Affengruber,Bigas,Pedrosa,Petrot,Fort,Gumbau', MID: 'Febas,Marc Aguado,Villar,Diangana,Gumbau,Josan,Germán Valera', FWD: 'Rafa Mir,André Silva,Boyé,Álvaro Rodríguez,Peter' },
+  LEV: { GK: 'Ryan,Cárdenas', DEF: 'Toljan,Matturro,Elgezabal,Manu Sánchez,Dela,Álex Valle,Cabello', MID: 'Pablo Martínez,Oriol Rey,Olasagasti,Losada,Carlos Álvarez,Kareem,Jon Ander', FWD: 'Morales,Brugué,Etta Eyong,Iván Romero,Carlos Espí' },
+  OVI: { GK: 'Escandell,Aarón', DEF: 'Dani Calvo,Carmo,David Costas,Alhassane,Lucas Ahijado,Rahim,Sibo', MID: 'Colombatto,Reina,Cazorla,Chaira,Nahuel,Hassan,Sergi Cardona', FWD: 'Borja Bastón,Fede Viñas,Rondón,Haissem Hassan,Alemão' }
+};
+for (const k in ROSTER) for (const r in ROSTER[k]) ROSTER[k][r] = ROSTER[k][r].split(',');
 const NUMS = [1, 2, 4, 5, 3, 6, 8, 10, 7, 9, 11];
 
 const FORMS = [
@@ -194,12 +218,14 @@ function mkTeam(i, def, fi, ctrl) {
     stats: { shots: 0, sot: 0, passes: 0, passOK: 0, tackles: 0, fouls: 0, yellow: 0, red: 0, poss: 0, corners: 0, saves: 0 } };
 }
 function mkPlayers(T) {
-  const used = new Set();
+  const used = new Set(), cnt = { GK: 0, DEF: 0, MID: 0, FWD: 0 };
   T.form.pos.forEach((pos, k) => {
     const role = k === 0 ? 'GK' : pos[0] < 0.3 ? 'DEF' : pos[0] < 0.62 ? 'MID' : 'FWD';
     const base = { GK: T.def.g, DEF: T.def.d, MID: T.def.m, FWD: T.def.a }[role];
-    const r = clamp(base + rnd(-5, 5), 55, 97);
-    let name; do { name = pick(SURN); } while (used.has(name)); used.add(name);
+    const r = clamp(base + rnd(-5, 5) + (cnt[role] === 1 ? 2 : 0), 55, 97);
+    const lst = (ROSTER[T.def.s] || {})[role], ri = cnt[role]++;
+    let name = lst && lst[ri];
+    if (!name) { do { name = pick(SURN); } while (used.has(name)); } used.add(name);
     T.players.push({ team: T.i, k, role, name, num: NUMS[k], r, spd: 8.3 * (0.93 + r / 1300) * (role === 'GK' ? 0.85 : 1),
       x: 0, y: 0, vx: 0, vy: 0, face: T.dir > 0 ? 0 : Math.PI, ph: rnd(0, 6), stam: 1, tired: false,
       wx: 0, wy: 0, sprint: false, cool: 0, stun: 0, tackleT: 0, slideT: 0, tkRes: true, tkCool: 0, tkT: rnd(0, 0.5),
@@ -1128,13 +1154,19 @@ try { crowdPat.setTransform(new DOMMatrix([0.09, 0, 0, 0.09, 0, 0])); grassPat.s
 // ───────────────────────── Dibujo del mundo (cámara de retransmisión) ─────────────────────────
 // Proyección en perspectiva hecha a mano: cámara elevada en la banda mirando al césped.
 const CAMD = 62, CAMT = 0.58, CSN = Math.sin(CAMT), CCS = Math.cos(CAMT);
-let PX = 0, PY = 0, PK = 1, CFL = 1, CCX = 0, CCY = 0, CCZ = 0, CSY = 0;
-function camSet(fx, fy, vw) { CFL = W * CAMD / vw; CCX = fx; CCY = fy + CAMD * CCS; CCZ = CAMD * CSN; CSY = H * 0.6; }
+let PX = 0, PY = 0, PK = 1, PZ = 1, CFL = 1, CCX = 0, CCY = 0, CCZ = 0, CSY = 0, CFX = 0, CFY = 0, CYC = 1, CYS = 0, CAMW = [0, 0, 0];
+function camSet(fx, fy, vw) {
+  CFL = W * CAMD / vw; CCX = fx; CCY = fy + CAMD * CCS; CCZ = CAMD * CSN; CSY = H * 0.6; CFX = fx; CFY = fy;
+  // cámara de retransmisión con posición casi fija en el centro de la banda: gira (yaw) para seguir el balón → perspectiva 3D real
+  const D = CAMD * CCS, cxg = PW / 2 + (fx - PW / 2) * 0.7, th = Math.atan((cxg - fx) / D);
+  CYC = Math.cos(th); CYS = Math.sin(th); CAMW = [cxg, fy + D, CCZ];
+}
 function pj(x, y, z) {
-  const vy = y - CCY, vz = z - CCZ;
+  const dx = x - CFX, dy = y - CFY, xr = CFX + dx * CYC - dy * CYS, yr = CFY + dx * CYS + dy * CYC;
+  const vy = yr - CCY, vz = z - CCZ;
   let zc = -vy * CCS - vz * CSN; if (zc < 2) zc = 2;
   const yc = -vy * CSN + vz * CCS, k = CFL / zc;
-  PX = W / 2 + (x - CCX) * k; PY = CSY - yc * k; PK = k;
+  PX = W / 2 + (xr - CCX) * k; PY = CSY - yc * k; PK = k; PZ = zc;
 }
 function poly(pts) {
   ctx.beginPath();
@@ -1255,66 +1287,140 @@ function drawGoal(s) {
 
 // Jugador de pie, con animación de carrera, golpeo, entrada y estirada
 function lum(h) { const c = hexRGB(h); return (0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]) / 255; }
+// ───────────────────────── Cuerpos 3D (mallas con sombreado y profundidad) ─────────────────────────
+const L3 = [-0.35, 0.5, 0.8].map((v, i, a) => v / Math.hypot(a[0], a[1], a[2]));
+const shadeC = (h, f) => { const c = hexRGB(h); return 'rgb(' + clamp(Math.round(c[0] * f), 0, 255) + ',' + clamp(Math.round(c[1] * f), 0, 255) + ',' + clamp(Math.round(c[2] * f), 0, 255) + ')'; };
+// o: { T(lx,ly,lz)->[sx,sy,k,depth,wx,wy,wz], N(lx,ly,lz)->normal en mundo, cam:[x,y,z], kit, gk, shorts, sock, skin, hair, num, sw, amp, kick, idle, boot }
+function body3(o) {
+  const T = o.T, N = o.N, cam = o.cam, kit = o.kit, gk = o.gk, main = kit.main, sec = kit.sec, skin = o.skin, hair = o.hair;
+  const amp = o.amp, sw = o.sw, parts = [], add = (d, fn) => parts.push({ d, fn });
+  const lean = amp * 0.09, hipZ = 0.93;
+  const mid = (a, b, t) => { t = t == null ? 0.5 : t; return [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t]; };
+  const cap = (A, B, ra, rb, col) => {
+    const m = T(...mid(A, B));
+    add(m[3], () => {
+      const a = T(A[0], A[1], A[2]), b = T(B[0], B[1], B[2]), r1 = ra * a[2], r2 = rb * b[2];
+      const dx = b[0] - a[0], dy = b[1] - a[1], L = Math.hypot(dx, dy) || 1, nx = -dy / L, ny = dx / L;
+      ctx.fillStyle = shadeC(col, 0.7);
+      ctx.beginPath(); ctx.moveTo(a[0] + nx * r1, a[1] + ny * r1); ctx.lineTo(b[0] + nx * r2, b[1] + ny * r2); ctx.lineTo(b[0] - nx * r2, b[1] - ny * r2); ctx.lineTo(a[0] - nx * r1, a[1] - ny * r1); ctx.closePath(); ctx.fill();
+      ctx.beginPath(); ctx.arc(a[0], a[1], r1, 0, TAU); ctx.fill(); ctx.beginPath(); ctx.arc(b[0], b[1], r2, 0, TAU); ctx.fill();
+      const sg = (nx * -0.5 + ny * -0.85) >= 0 ? 1 : -1, ra2 = (r1 + r2) / 2;
+      ctx.strokeStyle = shadeC(col, 1.12); ctx.lineWidth = Math.max(0.6, ra2 * 0.95); ctx.lineCap = 'round';
+      ctx.beginPath(); ctx.moveTo(a[0] + sg * nx * r1 * 0.32, a[1] + sg * ny * r1 * 0.32); ctx.lineTo(b[0] + sg * nx * r2 * 0.32, b[1] + sg * ny * r2 * 0.32); ctx.stroke();
+    });
+  };
+  const box = (z0, z1, w0, d0, w1, d1, y0, y1, col, pat) => {
+    const B = (i, j) => [i * w0, y0 + j * d0, z0], P = (i, j) => [i * w1, y1 + j * d1, z1];
+    const faces = [
+      { nm: 'front', n: [0, 1, 0], c: [B(-1, 1), B(1, 1), P(1, 1), P(-1, 1)] },
+      { nm: 'back', n: [0, -1, 0], c: [B(1, -1), B(-1, -1), P(-1, -1), P(1, -1)] },
+      { nm: 'right', n: [1, 0, 0], c: [B(1, 1), B(1, -1), P(1, -1), P(1, 1)] },
+      { nm: 'left', n: [-1, 0, 0], c: [B(-1, -1), B(-1, 1), P(-1, 1), P(-1, -1)] },
+      { nm: 'top', n: [0, 0, 1], c: [P(-1, -1), P(1, -1), P(1, 1), P(-1, 1)] }
+    ];
+    add(T(0, (y0 + y1) / 2, (z0 + z1) / 2)[3], () => {
+      for (const f of faces) {
+        const n = N(f.n[0], f.n[1], f.n[2]), cs = f.c.map(q => T(q[0], q[1], q[2]));
+        const cx = (cs[0][4] + cs[1][4] + cs[2][4] + cs[3][4]) / 4, cy = (cs[0][5] + cs[1][5] + cs[2][5] + cs[3][5]) / 4, cz = (cs[0][6] + cs[1][6] + cs[2][6] + cs[3][6]) / 4;
+        if (n[0] * (cam[0] - cx) + n[1] * (cam[1] - cy) + n[2] * (cam[2] - cz) <= 0) continue;
+        const sh = 0.55 + 0.5 * Math.max(0, n[0] * L3[0] + n[1] * L3[1] + n[2] * L3[2]);
+        ctx.beginPath(); ctx.moveTo(cs[0][0], cs[0][1]); for (let i = 1; i < 4; i++) ctx.lineTo(cs[i][0], cs[i][1]); ctx.closePath();
+        ctx.fillStyle = shadeC(col, sh); ctx.fill();
+        if (pat && (f.nm === 'front' || f.nm === 'back')) {
+          let p0 = cs[3], pu = cs[2], pv = cs[0];
+          if (cs[2][0] < cs[3][0]) { p0 = cs[2]; pu = cs[3]; pv = cs[1]; }
+          const ux = pu[0] - p0[0], uy = pu[1] - p0[1], vx = pv[0] - p0[0], vy = pv[1] - p0[1];
+          ctx.save(); ctx.clip();
+          ctx.transform(ux, uy, vx, vy, p0[0], p0[1]);
+          pat(f.nm, sh, Math.hypot(ux, uy), Math.hypot(vx, vy));
+          ctx.restore();
+        } else if (pat && f.nm !== 'top') { ctx.strokeStyle = 'rgba(0,0,0,.18)'; ctx.lineWidth = 1; ctx.stroke(); }
+      }
+    });
+  };
+  const ball3 = (C, r, col, extra) => {
+    const c0 = T(C[0], C[1], C[2]);
+    add(c0[3] - 0.01, () => {
+      const c = T(C[0], C[1], C[2]), R = r * c[2];
+      const g = ctx.createRadialGradient(c[0] - R * 0.35, c[1] - R * 0.4, R * 0.1, c[0], c[1], R);
+      g.addColorStop(0, shadeC(col, 1.18)); g.addColorStop(1, shadeC(col, 0.66));
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(c[0], c[1], R, 0, TAU); ctx.fill();
+      if (extra) extra(c, R);
+    });
+  };
+  // ── piernas ──
+  for (const i of [-1, 1]) {
+    const s2 = i * sw; let a = s2 * 0.85, kk = o.kick > 0 && i === 1;
+    if (kk) a = 0.25 + 1.0 * o.kick;
+    const hx = i * 0.1, H0 = [hx, 0, hipZ];
+    const knee = [hx, 0.46 * Math.sin(a), hipZ - 0.46 * Math.cos(a)];
+    const bA = kk ? a + 0.3 * o.kick : a - (0.2 + Math.max(0, -a) * 0.9 + amp * 0.2);
+    const ank = [hx, knee[1] + 0.46 * Math.sin(bA), Math.max(0.075, knee[2] - 0.46 * Math.cos(bA))];
+    const toe = [hx, ank[1] + 0.17, Math.max(0.05, ank[2] - 0.03)], pm = mid(H0, knee, 0.72);
+    cap(H0, pm, 0.112, 0.105, o.shorts); cap(pm, knee, 0.078, 0.07, skin); cap(knee, ank, 0.066, 0.054, o.sock); cap(ank, toe, 0.058, 0.05, o.boot || '#101216');
+  }
+  // ── pantalón y camiseta ──
+  box(0.74, 0.98, 0.19, 0.12, 0.16, 0.11, 0, 0, o.shorts, null);
+  const pat = (nm, sh, lu, lv) => {
+    ctx.fillStyle = shadeC(sec, sh);
+    if (gk) ctx.fillRect(0, 0.42, 1, 0.1);
+    else if (kit.pat === 'stripes') { for (let i = 1; i < 7; i += 2) ctx.fillRect(i / 7, 0, 1 / 7, 1); }
+    else if (kit.pat === 'hoops') { for (let j = 0; j < 3; j++) ctx.fillRect(0, 0.14 + j * 0.28, 1, 0.13); }
+    else if (kit.pat === 'half') ctx.fillRect(0.5, 0, 0.5, 1);
+    else ctx.fillRect(0, 0.04, 1, 0.06);
+    if (nm === 'back' && o.num != null && lu > 11) {
+      ctx.save(); ctx.translate(0.5, 0.4); ctx.scale(1 / lu, 1 / lv); ctx.fillStyle = lum(main) > 0.6 ? '#0f172a' : '#ffffff';
+      ctx.font = '800 ' + (0.42 * lu) + 'px "Segoe UI",Arial,sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(String(o.num), 0, 0); ctx.restore();
+    }
+  };
+  box(0.92, 1.52, 0.155, 0.11, 0.235, 0.13, 0, lean, main, pat);
+  // ── brazos ──
+  for (const i of [-1, 1]) {
+    const a = o.idle ? i * 0.22 : -i * sw * 0.9, S0 = [i * 0.245, lean, 1.44];
+    const el = [S0[0] + i * 0.03, S0[1] + 0.3 * Math.sin(a), S0[2] - 0.3 * Math.cos(a)];
+    const bd = a + 0.5 + amp * 0.6, hn = [el[0], el[1] + 0.27 * Math.sin(bd), el[2] - 0.27 * Math.cos(bd)];
+    cap(S0, el, 0.07, 0.058, main); cap(el, hn, 0.05, 0.042, gk ? main : skin); ball3(hn, 0.045, gk ? '#e5e7eb' : skin);
+  }
+  // ── cuello y cabeza ──
+  { const nk = T(0, lean + 0.005, 1.55); add(nk[3] + 0.6, () => { const a = T(0, lean, 1.46), b = T(0, lean + 0.01, 1.6); ctx.strokeStyle = shadeC(skin, 0.8); ctx.lineCap = 'round'; ctx.lineWidth = 0.11 * a[2]; ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.stroke(); }); }
+  const Hc = [0, lean + 0.02, 1.7];
+  ball3(Hc, 0.118, skin, (c, R) => {
+    const fn = N(0, 1, 0), hw = T(Hc[0], Hc[1], Hc[2]);
+    let vx = cam[0] - hw[4], vy = cam[1] - hw[5], vz = cam[2] - hw[6]; const vl = Math.hypot(vx, vy, vz) || 1;
+    const f = (fn[0] * vx + fn[1] * vy + fn[2] * vz) / vl;
+    ctx.fillStyle = hair;
+    if (f < -0.25) { ctx.beginPath(); ctx.arc(c[0], c[1], R * 1.03, 0, TAU); ctx.fill(); }
+    else {
+      const t2 = T(Hc[0], Hc[1] + 0.2, Hc[2]), sx = (t2[0] - c[0]) / (t2[2] * 0.2 + 1e-6), side = f < 0.45;
+      ctx.beginPath(); ctx.arc(c[0], c[1] - R * 0.05, R * 1.03, Math.PI * 1.02, TAU * 0.998); ctx.closePath(); ctx.fill();
+      if (side) { ctx.beginPath(); ctx.arc(c[0] - Math.sign(sx) * R * 0.34, c[1] - R * 0.12, R * 0.74, 0, TAU); ctx.fill(); }
+      if (f > 0.5 && R > 4) { ctx.fillStyle = '#1b1410'; for (const e of [-1, 1]) { ctx.beginPath(); ctx.arc(c[0] + e * R * 0.38, c[1] + R * 0.12, R * 0.085, 0, TAU); ctx.fill(); } }
+    }
+  });
+  parts.sort((a, b) => b.d - a.d);
+  for (const p of parts) p.fn();
+}
 function drawPlayer(p) {
-  const T = G.teams[p.team], kit = T.kit, gk = p.role === 'GK';
+  const T0 = G.teams[p.team], kit = T0.kit, gk = p.role === 'GK';
   if (!p.skin) { p.skin = pick(SKINS); p.hair = pick(HAIRS); }
   pj(p.x, p.y, 0);
-  const sx = PX, sy = PY, k = PK, u = k * 1.32;
+  const sx = PX, sy = PY, k = PK, u = k * 1.32, SC = 1.32;
   if (sx < -90 || sx > W + 90 || sy < -60 || sy > H + 170) return;
   const slide = p.slideT > 0, dive = p.diveT > 0, lying = slide || dive;
-  const fc = Math.cos(p.face), fs = Math.sin(p.face), side = fc >= 0 ? 1 : -1, af = Math.abs(fc), as = Math.abs(fs);
-  const away = fs < -0.3, toward = fs > 0.3;
-  ctx.fillStyle = 'rgba(0,0,0,.30)'; ctx.beginPath(); ctx.ellipse(sx + 0.22 * u, sy + 0.03 * u, (lying ? 1.0 : 0.42) * u, (lying ? 0.28 : 0.16) * u, 0, 0, TAU); ctx.fill();
+  const fc = Math.cos(p.face), fs = Math.sin(p.face), side = fc >= 0 ? 1 : -1;
+  ctx.fillStyle = 'rgba(0,0,0,.30)'; ctx.beginPath(); ctx.ellipse(sx + 0.3 * u, sy + 0.03 * u, (lying ? 1.0 : 0.46) * u, (lying ? 0.28 : 0.17) * u, 0, 0, TAU); ctx.fill();
   const sp = hyp(p.vx, p.vy), amp = Math.min(1, sp / 6.5), sw = Math.sin(p.ph * 1.6) * amp;
-  const main = gk ? kit.gk : kit.main, sec = gk ? '#111827' : kit.sec, shorts = gk ? '#111827' : (lum(sec) > 0.92 && lum(main) > 0.85 ? '#1e293b' : sec), sock = main;
-  const X = x => sx + x * u, Y = y => sy - y * u;
-  ctx.save();
-  if (lying) {
-    const piv = Y(0.9);
-    ctx.translate(sx, piv); ctx.rotate(slide ? -side * 1.2 : side * 1.35); ctx.translate(-sx, -piv);
-    if (dive) ctx.translate(0, 0.5 * u);
-  }
-  const limb = (x0, y0, x1, y1, w, col) => { ctx.strokeStyle = col; ctx.lineWidth = w * u; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(X(x0), Y(y0)); ctx.lineTo(X(x1), Y(y1)); ctx.stroke(); };
-  const hs = 0.07 + 0.07 * as;
-  // piernas
-  for (const i of [-1, 1]) {
-    const s2 = i * sw; let fx = i * hs + s2 * 0.36 * af * side, fy = 0.07 + Math.max(0, s2) * 0.13 * amp - s2 * 0.1 * as * (fs > 0 ? 1 : -1);
-    if (p.kick > 0 && i === 1) { fx += side * 0.45 * (p.kick / 0.25); fy += 0.2; }
-    if (lying) { fx = i * 0.09 + side * 0.15; fy = 0.1 + (i + 1) * 0.1; }
-    const hx = i * hs, kx = (hx + fx) / 2 + side * 0.06 * af, ky = (0.92 + fy) / 2 + 0.03;
-    limb(hx, 0.92, kx, ky, 0.2, shorts); limb(kx, ky, fx, fy + 0.05, 0.13, sock);
-    ctx.fillStyle = '#0b0b0b'; ctx.beginPath(); ctx.ellipse(X(fx + side * 0.05 * af), Y(fy), 0.12 * u, 0.055 * u, 0, 0, TAU); ctx.fill();
-  }
-  // pantalón
-  const tw = 0.36 + 0.2 * as;
-  ctx.fillStyle = shorts; RR(X(-tw / 2 - 0.01), Y(1.04), (tw + 0.02) * u, 0.22 * u, 0.05 * u); ctx.fill();
-  // camiseta
-  const tx = X(-tw / 2), ty = Y(1.52), th = 0.52 * u, tww = tw * u;
-  ctx.save(); RR(tx, ty, tww, th, 0.07 * u); ctx.fillStyle = main; ctx.fill(); ctx.clip();
-  ctx.fillStyle = sec;
-  if (!gk) {
-    if (kit.pat === 'stripes') for (let i = -3; i <= 3; i++) ctx.fillRect(sx + (i * 0.13 - 0.04) * u, ty, 0.08 * u, th);
-    else if (kit.pat === 'hoops') for (let j = 0; j < 3; j++) ctx.fillRect(tx, ty + (0.08 + j * 0.17) * u, tww, 0.08 * u);
-    else if (kit.pat === 'half') ctx.fillRect(sx, ty, tww / 2 + 1, th);
-    else ctx.fillRect(tx, ty + 0.04 * u, tww, 0.045 * u);
-  } else ctx.fillRect(tx, ty + th * 0.4, tww, 0.07 * u);
-  const sh = ctx.createLinearGradient(tx, 0, tx + tww, 0); sh.addColorStop(0, 'rgba(255,255,255,.16)'); sh.addColorStop(1, 'rgba(0,0,0,.2)'); ctx.fillStyle = sh; ctx.fillRect(tx, ty, tww, th);
-  if (away && u > 17) { ctx.fillStyle = lum(main) > 0.6 ? '#0f172a' : '#ffffff'; ctx.font = '800 ' + (0.26 * u) + 'px "Segoe UI",Arial,sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(String(p.num), sx, Y(1.28)); }
-  ctx.restore();
-  // brazos
-  const shx = (tw / 2 - 0.02) * (0.35 + 0.65 * as);
-  for (const i of [-1, 1]) {
-    const s2 = -i * sw, hx = i * (tw / 2 + 0.03) * (0.4 + 0.6 * as) + s2 * 0.3 * af * side, hy = 0.98 + Math.max(0, s2) * 0.08;
-    const ex = (i * shx + hx) / 2, ey = 1.22;
-    limb(i * shx, 1.46, ex, ey, 0.115, main); limb(ex, ey, hx, hy, 0.09, p.skin);
-  }
-  // cabeza
-  const hx = side * 0.02 * af, hy = 1.68, r = 0.13 * u;
-  ctx.fillStyle = p.skin; ctx.beginPath(); ctx.arc(X(hx), Y(hy), r, 0, TAU); ctx.fill();
-  ctx.fillStyle = p.hair;
-  if (away) { ctx.beginPath(); ctx.arc(X(hx), Y(hy), r * 1.03, 0, TAU); ctx.fill(); }
-  else { ctx.beginPath(); ctx.arc(X(hx), Y(hy), r * 1.03, Math.PI, TAU); ctx.fill(); if (af > 0.55) { ctx.beginPath(); ctx.arc(X(hx) - side * 0.05 * u, Y(hy) - 0.005 * u, r * 0.8, 0, TAU); ctx.fill(); } }
-  ctx.restore();
+  const main = gk ? kit.gk : kit.main, sec = gk ? '#111827' : kit.sec, shorts = gk ? '#111827' : (lum(sec) > 0.92 && lum(main) > 0.85 ? '#1e293b' : sec);
+  const phi = lying ? (slide ? -side * 1.2 : side * 1.35) : 0, cp = Math.cos(phi), sp2 = Math.sin(phi);
+  const rot = (lx, ly, lz, pz) => {
+    lx *= SC; ly *= SC; lz *= SC;
+    let x = -lx * fs + ly * fc, y = lx * fc + ly * fs, z = lz;
+    if (phi) { const zz = z - pz; const nx = x * cp + zz * sp2; z = -x * sp2 + zz * cp + pz; x = nx; }
+    return [x, y, z];
+  };
+  const T = (lx, ly, lz) => { const v = rot(lx, ly, lz, 0.3); const wz = Math.max(0.02, v[2]); pj(p.x + v[0], p.y + v[1], wz); return [PX, PY, PK * SC, PZ, p.x + v[0], p.y + v[1], wz]; };
+  const N = (lx, ly, lz) => { const v = rot(lx / SC, ly / SC, lz / SC, 0); return [v[0] / SC, v[1] / SC, v[2] / SC]; };
+  body3({ T, N, cam: CAMW, kit: { main, sec, pat: kit.pat }, gk, shorts, sock: main, skin: p.skin, hair: p.hair, num: p.num, sw, amp, kick: p.kick > 0 ? Math.min(1, p.kick / 0.25) : 0, boot: p.num % 4 === 0 ? '#e5e7eb' : '#101216' });
 }
 function drawBall() {
   const b = G.ball; pj(b.x, b.y, 0);
@@ -1834,32 +1940,15 @@ function pickOk() {
   Snd.ok(); S.screen = 'versus'; S.vsFocus = side + 1 < vsButtons() ? side + 1 : vsButtons();
 }
 function drawFigureFront(cx, by, h, kit, skin, hair) {
-  const u = h / 1.85, X = x => cx + x * u, Y = y => by - y * u;
-  const lim = (x0, y0, x1, y1, w, col) => { ctx.strokeStyle = col; ctx.lineWidth = w * u; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(X(x0), Y(y0)); ctx.lineTo(X(x1), Y(y1)); ctx.stroke(); };
-  const gl = ctx.createRadialGradient(cx, by, 0, cx, by, h * 0.5); gl.addColorStop(0, 'rgba(255,214,120,.30)'); gl.addColorStop(1, 'rgba(255,214,120,0)');
-  ctx.fillStyle = gl; ctx.beginPath(); ctx.ellipse(cx, by, h * 0.5, h * 0.13, 0, 0, TAU); ctx.fill();
-  ctx.fillStyle = 'rgba(0,0,0,.4)'; ctx.beginPath(); ctx.ellipse(cx, by + 2, h * 0.24, h * 0.035, 0, 0, TAU); ctx.fill();
-  const shorts = lum(kit.sec) > 0.92 && lum(kit.main) > 0.85 ? '#1e293b' : kit.sec;
-  for (const i of [-1, 1]) {
-    lim(i * 0.12, 0.95, i * 0.15, 0.55, 0.23, shorts); lim(i * 0.15, 0.55, i * 0.16, 0.1, 0.15, kit.main);
-    ctx.fillStyle = '#0b0b0b'; ctx.beginPath(); ctx.ellipse(X(i * 0.17), Y(0.05), 0.12 * u, 0.06 * u, i * 0.2, 0, TAU); ctx.fill();
-  }
-  RR(X(-0.27), Y(1.1), 0.54 * u, 0.27 * u, 0.06 * u); ctx.fillStyle = shorts; ctx.fill();
-  for (const i of [-1, 1]) { lim(i * 0.31, 1.5, i * 0.39, 1.2, 0.13, kit.main); lim(i * 0.39, 1.2, i * 0.37, 0.93, 0.1, skin); ctx.fillStyle = skin; ctx.beginPath(); ctx.arc(X(i * 0.37), Y(0.9), 0.06 * u, 0, TAU); ctx.fill(); }
-  ctx.save(); RR(X(-0.29), Y(1.6), 0.58 * u, 0.6 * u, 0.1 * u); ctx.fillStyle = kit.main; ctx.fill(); ctx.clip();
-  ctx.fillStyle = kit.sec;
-  if (kit.pat === 'stripes') for (let i = -3; i <= 3; i++) ctx.fillRect(X(i * 0.11 - 0.035), Y(1.6), 0.07 * u, 0.6 * u);
-  else if (kit.pat === 'hoops') for (let j = 0; j < 4; j++) ctx.fillRect(X(-0.3), Y(1.52 - j * 0.15), 0.6 * u, 0.07 * u);
-  else if (kit.pat === 'half') ctx.fillRect(cx, Y(1.6), 0.3 * u, 0.6 * u);
-  else { ctx.fillRect(X(-0.3), Y(1.5), 0.6 * u, 0.04 * u); }
-  const sh = ctx.createLinearGradient(X(-0.29), 0, X(0.29), 0); sh.addColorStop(0, 'rgba(255,255,255,.2)'); sh.addColorStop(1, 'rgba(0,0,0,.28)'); ctx.fillStyle = sh; ctx.fillRect(X(-0.3), Y(1.6), 0.6 * u, 0.6 * u);
-  ctx.restore();
-  ctx.fillStyle = skin; ctx.fillRect(X(-0.06), Y(1.7), 0.12 * u, 0.14 * u);
-  ctx.fillStyle = kit.sec; ctx.beginPath(); ctx.moveTo(X(-0.1), Y(1.6)); ctx.lineTo(X(0.1), Y(1.6)); ctx.lineTo(X(0), Y(1.5)); ctx.closePath(); ctx.fill();
-  ctx.fillStyle = skin; ctx.beginPath(); ctx.ellipse(X(0), Y(1.79), 0.12 * u, 0.145 * u, 0, 0, TAU); ctx.fill();
-  ctx.beginPath(); ctx.ellipse(X(-0.125), Y(1.78), 0.02 * u, 0.04 * u, 0, 0, TAU); ctx.ellipse(X(0.125), Y(1.78), 0.02 * u, 0.04 * u, 0, 0, TAU); ctx.fill();
-  ctx.fillStyle = hair; ctx.beginPath(); ctx.ellipse(X(0), Y(1.84), 0.13 * u, 0.12 * u, 0, Math.PI, TAU); ctx.fill();
-  ctx.fillStyle = 'rgba(10,10,10,.8)'; ctx.beginPath(); ctx.arc(X(-0.045), Y(1.79), 0.014 * u, 0, TAU); ctx.arc(X(0.045), Y(1.79), 0.014 * u, 0, TAU); ctx.fill();
+  const s = h / 1.86, sd = cx < W / 2 ? -1 : 1, f = Math.PI / 2 + sd * 0.45 + Math.sin(S.t * 0.7 + (sd > 0 ? 1.7 : 0)) * 0.55, cf = Math.cos(f), sf = Math.sin(f), cp = Math.cos(0.1), sp = Math.sin(0.1);
+  const rot = (lx, ly, lz) => [-lx * sf + ly * cf, lx * cf + ly * sf, lz];
+  const T = (lx, ly, lz) => { const v = rot(lx, ly, lz); return [cx + v[0] * s, by - v[2] * s * cp + v[1] * s * sp, s, -v[1], v[0], v[1], v[2]]; };
+  const N = (lx, ly, lz) => rot(lx, ly, lz);
+  const g = ctx.createRadialGradient(cx, by + 4, 4, cx, by + 4, h * 0.5); g.addColorStop(0, 'rgba(255,214,130,.38)'); g.addColorStop(1, 'rgba(255,214,130,0)');
+  ctx.save(); ctx.translate(cx, by + 6); ctx.scale(1, 0.2); ctx.translate(-cx, -(by + 6)); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, by + 6, h * 0.5, 0, TAU); ctx.fill(); ctx.restore();
+  ctx.fillStyle = 'rgba(0,0,0,.45)'; ctx.beginPath(); ctx.ellipse(cx + 8, by + 6, h * 0.17, h * 0.032, 0, 0, TAU); ctx.fill();
+  const br = Math.sin(S.t * 2) * 0.02;
+  body3({ T, N, cam: [0, 40, 4], kit, gk: false, shorts: lum(kit.sec) > 0.92 && lum(kit.main) > 0.85 ? '#1e293b' : kit.sec, sock: kit.main, skin, hair, num: 10, sw: br, amp: 0, kick: 0, idle: true });
 }
 function kbdIcon(cx, cy, s, col) {
   ctx.strokeStyle = col; ctx.fillStyle = col; ctx.lineWidth = Math.max(1.5, s * 0.05);
@@ -1969,19 +2058,131 @@ function drawHelp() {
   TX('Penaltis: ↑/↓ apunta, mantén tiro y suelta. De portero: ↑/↓ para elegir lado.', W / 2, 170 + rows.length * 46 + 104, 15, '#cbd5e1', 'center', 600);
   button('VOLVER', W / 2 - 110, H - 90, 220, 54, true, () => { S.screen = S.helpBack; });
 }
+// ───────────────────────── Presentación del partido (estadio, salida de jugadores y alineaciones) ─────────────────────────
+const STAD = {
+  RMA: ['SANTIAGO BERNABÉU', 'Madrid'], FCB: ['SPOTIFY CAMP NOU', 'Barcelona'], ATM: ['RIYADH AIR METROPOLITANO', 'Madrid'], ATH: ['SAN MAMÉS', 'Bilbao'],
+  RSO: ['REALE ARENA', 'San Sebastián'], VIL: ['ESTADIO DE LA CERÁMICA', 'Villarreal'], BET: ['BENITO VILLAMARÍN', 'Sevilla'], SEV: ['RAMÓN SÁNCHEZ-PIZJUÁN', 'Sevilla'],
+  VAL: ['MESTALLA', 'Valencia'], GIR: ['ESTADI MONTILIVI', 'Girona'], CEL: ['ABANCA BALAÍDOS', 'Vigo'], OSA: ['EL SADAR', 'Pamplona'], GET: ['COLISEUM', 'Getafe'],
+  RAY: ['ESTADIO DE VALLECAS', 'Madrid'], MLL: ['SON MOIX', 'Palma'], ALA: ['MENDIZORROTZA', 'Vitoria-Gasteiz'], ESP: ['RCDE STADIUM', 'Cornellà'],
+  ELC: ['MARTÍNEZ VALERO', 'Elche'], LEV: ['CIUTAT DE VALÈNCIA', 'Valencia'], OVI: ['CARLOS TARTIERE', 'Oviedo']
+};
+const COACH = { RMA: 'Xabi Alonso', FCB: 'Hans-Dieter Flick', ATM: 'Diego Simeone', ATH: 'Ernesto Valverde', RSO: 'Sergio Francisco', VIL: 'Marcelino', BET: 'Manuel Pellegrini', SEV: 'Matías Almeyda', VAL: 'Carlos Corberán', GIR: 'Míchel', CEL: 'Claudio Giráldez', OSA: 'Alessio Lisci', GET: 'José Bordalás', RAY: 'Íñigo Pérez', MLL: 'Jagoba Arrasate', ALA: 'Eduardo Coudet', ESP: 'Manolo González', ELC: 'Eder Sarabia', LEV: 'Julián Calero', OVI: 'Veljko Paunović' };
+const INTRO_WALK = 8, INTRO_CARD = 4.5, INTRO_END = INTRO_WALK + INTRO_CARD * 2 + 0.4;
+function introSkip() {
+  const t = S.introT;
+  if (t < INTRO_WALK) S.introT = INTRO_WALK; else if (t < INTRO_WALK + INTRO_CARD) S.introT = INTRO_WALK + INTRO_CARD; else S.introT = INTRO_END;
+}
+function beginMatch() {
+  const o = G.o; newMatch(o); S.screen = 'play'; S.hint = 16; keys.clear(); edge.dn.clear(); edge.up.clear();
+}
+function introUpdate(dt) {
+  S.introT += dt; const t = S.introT; Snd.boost = Math.max(Snd.boost || 0, 0.35);
+  if (t >= INTRO_END) { beginMatch(); return; }
+  const c = G.cam, e = clamp(t / INTRO_WALK, 0, 1), se = e * e * (3 - 2 * e);
+  c.x = PW * (0.18 + 0.32 * se); c.y = PH * (0.7 - 0.08 * se); c.vw = 92 - 38 * se;
+  if (t >= INTRO_WALK) { const q = clamp((t - INTRO_WALK) / (INTRO_CARD * 2), 0, 1); c.x = PW * (0.5 + 0.03 * q); c.vw = 54 - 3 * q; }
+  const dur = 4.4;
+  for (const T of G.teams) T.players.forEach((p, k) => {
+    const d = (10 - k) * 0.3 + T.i * 0.15, f = clamp((t - d) / dur, 0, 1);
+    const sx = PW / 2 + (T.i ? 3.5 : -3.5), sy = PH + 12, ex = PW / 2 + (T.i ? 2.5 + k * 2.3 : -2.5 - k * 2.3), ey = PH * 0.7 + (p.role === 'GK' ? 0.5 : 0);
+    p.out = t < d; p.x = sx + (ex - sx) * f; p.y = sy + (ey - sy) * f;
+    const mv = f > 0 && f < 1; p.vx = mv ? (ex - sx) / dur : 0; p.vy = mv ? (ey - sy) / dur : 0;
+    p.face = mv ? Math.atan2(p.vy, p.vx) : Math.PI / 2; p.ph += hyp(p.vx, p.vy) * dt * 1.5; p.kick = 0; p.slideT = 0; p.diveT = 0;
+  });
+}
+function lineupData(ti) {
+  const T = G.teams[ti], s = T.def.s, R = ROSTER[s], start = T.players.map(p => ({ n: p.num, name: p.name })), used = new Set(start.map(x => x.name)), subs = [];
+  if (R) {
+    const take = (arr, n) => { let c = 0; for (const nm of arr) if (!used.has(nm) && c < n) { used.add(nm); subs.push(nm); c++; } };
+    take(R.GK, 1); take(R.DEF, 2); take(R.MID, 2); take(R.FWD, 2);
+  }
+  const SN = [25, 14, 15, 20, 22, 17, 19];
+  return { T, start, subs: subs.map((nm, i) => ({ n: SN[i], name: nm })), coach: COACH[s] || 'Entrenador' };
+}
+function drawLineup(ti, age) {
+  const D = lineupData(ti), T = D.T, k = clamp(age / 0.45, 0, 1), ek = 1 - Math.pow(1 - k, 3);
+  ctx.fillStyle = `rgba(2,6,14,${0.55 * k})`; ctx.fillRect(0, 0, W, H);
+  const w = Math.min(W * 0.7, H * 1.08), h = w * 0.79, s = w / 707, x0 = (W - w) / 2, y0 = (H - h) / 2 + (1 - ek) * 30;
+  ctx.save(); ctx.globalAlpha = ek; ctx.translate(x0, y0); ctx.scale(s, s);
+  const F = (px, wt) => `${wt || 400} ${px}px Impact,"Arial Narrow","Roboto Condensed",sans-serif`, TQ = (t, x, y, px, col, al) => { ctx.font = F(px); ctx.fillStyle = col; ctx.textAlign = al || 'left'; ctx.textBaseline = 'middle'; ctx.fillText(t, x, y); };
+  const CORAL = '#f0524f';
+  ctx.fillStyle = '#ffffff'; ctx.fillRect(105, 50, 602, 46);
+  RR(537, 6, 170, 46, 0); ctx.fillStyle = CORAL; ctx.fill(); RR(548, 12, 34, 34, 7); ctx.fillStyle = '#d3122e'; ctx.fill(); drawLeagueLogo(565, 29, 30);
+  TQ('LIGA 27', 600, 29, 24, '#fff');
+  ctx.fillStyle = '#0a1230'; ctx.fillRect(0, 0, 105, 96); drawCrest(52, 48, 78, T.def);
+  TQ(T.def.n.toUpperCase(), 118, 73, 33, '#0b0f1a');
+  ctx.fillStyle = '#05070c'; ctx.fillRect(0, 96, 707, 40); TQ('ONCE INICIAL', 44, 116, 26, '#fff'); TQ('SUPLENTES', 398, 116, 26, '#fff');
+  const rh = 34.5, ry = 136;
+  ctx.fillStyle = CORAL; ctx.fillRect(0, ry, 40, rh * 11); ctx.fillRect(352, ry, 44, rh * 11);
+  for (let i = 0; i < 11; i++) {
+    const y = ry + i * rh, it = D.start[i]; ctx.fillStyle = i % 2 ? '#ececec' : '#ffffff'; ctx.fillRect(40, y, 312, rh);
+    if (it) { TQ(String(it.n), 20, y + rh / 2 + 1, 23, '#fff', 'center'); TQ(it.name.toUpperCase(), 50, y + rh / 2 + 1, 23, '#10131a'); }
+  }
+  for (let i = 0; i < 11; i++) {
+    const y = ry + i * rh, it = D.subs[i];
+    ctx.fillStyle = i < 7 ? (i % 2 ? 'rgba(6,10,20,.55)' : 'rgba(6,10,20,.7)') : 'rgba(6,10,20,0)'; ctx.fillRect(396, y, 311, rh);
+    if (it) { TQ(String(it.n), 374, y + rh / 2 + 1, 23, '#fff', 'center'); TQ(it.name.toUpperCase(), 408, y + rh / 2 + 1, 23, '#fff'); }
+  }
+  ctx.fillStyle = CORAL; ctx.fillRect(397, 515, 310, 44); TQ('ENTRENADOR', 408, 528, 12, '#fff'); TQ(D.coach.toUpperCase(), 408, 546, 22, '#fff');
+  ctx.restore();
+}
+function drawIntro() {
+  const t = S.introT, u = uiS();
+  drawWorld();
+  if (t < INTRO_WALK) {
+    const bh = H * 0.075; ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, bh); ctx.fillRect(0, H - bh, W, bh);
+    const a = clamp((t - 0.8) / 0.6, 0, 1) * clamp((INTRO_WALK - 0.5 - t) / 0.6, 0, 1), st = STAD[G.teams[0].def.s] || ['ESTADIO', ''];
+    if (a > 0) {
+      ctx.save(); ctx.globalAlpha = a; const bx = 40 * u - (1 - a) * 60 * u, by = H - bh - 120 * u, bw = Math.min(W * 0.46, 520 * u);
+      ctx.fillStyle = 'rgba(8,12,26,.88)'; ctx.fillRect(bx, by, bw, 70 * u); ctx.fillStyle = '#f0524f'; ctx.fillRect(bx, by, 8 * u, 70 * u);
+      RR(bx + 22 * u, by + 14 * u, 42 * u, 42 * u, 9 * u); ctx.fillStyle = '#d3122e'; ctx.fill(); drawLeagueLogo(bx + 43 * u, by + 35 * u, 36 * u);
+      ctx.font = `400 ${28 * u}px Impact,"Arial Narrow",sans-serif`; ctx.fillStyle = '#fff'; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillText(st[0], bx + 80 * u, by + 26 * u);
+      TX(st[1] + ' · ' + G.teams[0].def.n + ' vs ' + G.teams[1].def.n, bx + 80 * u, by + 54 * u, 14 * u, 'rgba(255,255,255,.75)', 'left', 600);
+      ctx.restore();
+    }
+  } else drawLineup(t < INTRO_WALK + INTRO_CARD ? 0 : 1, (t - INTRO_WALK) % INTRO_CARD);
+  const fi = clamp(1 - t / 0.9, 0, 1), fo = clamp((t - (INTRO_END - 0.4)) / 0.4, 0, 1), fa = Math.max(fi, fo);
+  if (fa > 0) { ctx.fillStyle = `rgba(0,0,0,${fa})`; ctx.fillRect(0, 0, W, H); }
+  TX('ENTER / clic: saltar', W - 24 * u, H - 22 * u, 13 * u, 'rgba(255,255,255,.65)', 'right', 600);
+  hit(0, 0, W, H, () => introSkip());
+}
+// ── Pausa estilo consola ──
+const PAUSE_ITEMS = () => ['Reanudar partido', 'Alineaciones', 'Controles', 'Sonido: ' + (Snd.on ? 'sí' : 'no'), 'Salir del partido'];
 function drawPause() {
-  ctx.fillStyle = 'rgba(5,8,18,.72)'; ctx.fillRect(0, 0, W, H);
-  TX('PAUSA', W / 2, 150, 60, '#fff', 'center', 900, true);
-  const items = ['CONTINUAR', 'CONTROLES', `SONIDO: ${Snd.on ? 'SÍ' : 'NO'}`, 'SALIR AL MENÚ'], bw = 380, bx = W / 2 - bw / 2;
-  items.forEach((s, i) => { S.hoverFn = () => { S.pauseRow = i; }; button(s, bx, 210 + i * 76, bw, 62, S.pauseRow === i, () => { S.pauseRow = i; pauseOk(); }); });
-  S.hoverFn = null;
+  const u = uiS(), items = PAUSE_ITEMS(), T0 = G.teams[0], T1 = G.teams[1];
+  const g = ctx.createLinearGradient(0, 0, W * 0.62, 0); g.addColorStop(0, 'rgba(10,12,14,.97)'); g.addColorStop(0.55, 'rgba(10,12,14,.82)'); g.addColorStop(1, 'rgba(10,12,14,.0)');
+  ctx.fillStyle = 'rgba(0,0,0,.28)'; ctx.fillRect(0, 0, W, H); ctx.fillStyle = g; ctx.fillRect(0, 0, W * 0.7, H);
+  RR(50 * u, 22 * u, 36 * u, 36 * u, 8 * u); ctx.fillStyle = '#d3122e'; ctx.fill(); drawLeagueLogo(68 * u, 40 * u, 30 * u);
+  TX('Partido de LIGA 27', 100 * u, 40 * u, 16 * u, '#fff', 'left', 600);
+  const gm = Math.floor(G.clock / 60), gs = Math.floor(G.clock % 60), tm = G.len > 1e8 ? '0:00' : `${Math.floor(G.clock / G.len * 90)}:00`;
+  const px = W - 500 * u, py = 20 * u; RR(px, py, 480 * u, 40 * u, 8 * u); ctx.fillStyle = 'rgba(15,18,24,.88)'; ctx.fill();
+  TX(`${gm}:${String(gs).padStart(2, '0')}`, px + 16 * u, py + 21 * u, 15 * u, '#fff', 'left', 700);
+  drawCrest(px + 128 * u, py + 20 * u, 26 * u, T0.def); TX(T0.def.n, px + 148 * u, py + 21 * u, 14 * u, '#fff', 'left', 600);
+  TX(`${T0.score} - ${T1.score}`, px + 290 * u, py + 21 * u, 17 * u, '#fff', 'center', 800);
+  drawCrest(px + 352 * u, py + 20 * u, 26 * u, T1.def); TX(T1.def.n, px + 372 * u, py + 21 * u, 14 * u, '#fff', 'left', 600);
+  const x = 50 * u, y0 = H * 0.2, step = 52 * u;
+  items.forEach((s, i) => {
+    const sel = S.pauseRow === i, y = y0 + i * step;
+    TX(s, x, y, (sel ? 27 : 24) * u, sel ? '#ffffff' : 'rgba(255,255,255,.62)', 'left', sel ? 800 : 500);
+    hit(x - 20 * u, y - step / 2, 420 * u, step, () => { S.pauseRow = i; pauseOk(); }, () => { S.pauseRow = i; });
+  });
+  ctx.fillStyle = 'rgba(255,255,255,.7)';
+  const bx = 50 * u, by = H - 30 * u;
+  ctx.beginPath(); ctx.arc(bx + 9 * u, by, 9 * u, 0, TAU); ctx.fill(); TX('✕', bx + 9 * u, by + 1, 11 * u, '#111', 'center', 800); TX('Seleccionar (Enter)', bx + 26 * u, by, 14 * u, 'rgba(255,255,255,.8)', 'left', 600);
+  ctx.beginPath(); ctx.arc(bx + 230 * u, by, 9 * u, 0, TAU); ctx.fill(); TX('○', bx + 230 * u, by + 1, 12 * u, '#111', 'center', 800); TX('Reanudar (Esc)', bx + 246 * u, by, 14 * u, 'rgba(255,255,255,.8)', 'left', 600);
 }
 function pauseOk() {
   Snd.click();
   if (S.pauseRow === 0) S.screen = 'play';
-  else if (S.pauseRow === 1) { S.helpBack = 'pause'; S.screen = 'help'; }
-  else if (S.pauseRow === 2) { S.opt.sound = !S.opt.sound; Snd.on = S.opt.sound; }
+  else if (S.pauseRow === 1) { S.lineTeam = 0; S.lineT = S.t; S.screen = 'lineup'; }
+  else if (S.pauseRow === 2) { S.helpBack = 'pause'; S.screen = 'help'; }
+  else if (S.pauseRow === 3) { S.opt.sound = !S.opt.sound; Snd.on = S.opt.sound; }
   else { startDemo(); S.screen = 'mode'; S.mi = 0; S.si = -1; }
+}
+function drawLineupView() {
+  drawLineup(S.lineTeam, S.t - S.lineT);
+  const u = uiS(); TX('← → cambiar equipo · ESC volver', W / 2, H - 24 * u, 14 * u, 'rgba(255,255,255,.75)', 'center', 600);
+  hit(0, 0, W, H, () => { S.lineTeam = 1 - S.lineTeam; S.lineT = S.t; });
 }
 function drawEnd() {
   if (G) drawWorld();
@@ -2026,7 +2227,7 @@ function startGame() {
   const m = S.mode, o = { t: [S.sel[0], S.sel[1]], f: [TEAMS[S.sel[0]].f, TEAMS[S.sel[1]].f], len: LENS[S.opt.len].s, diff: S.opt.diff, pens: S.opt.pens, replay: S.opt.replay,
     c: m === '1p' ? [MAP1, null] : m === '2p' ? [MAP2A, MAP2B] : [null, null] };
   Snd.init(); Snd.resume(); Snd.on = S.opt.sound; Snd.quiet = false;
-  newMatch(o); S.screen = 'play'; S.hint = 16;
+  newMatch(o); S.screen = S.pensOnly ? 'play' : 'intro'; S.introT = 0; S.hint = 16;
   if (S.pensOnly) { G.o.pens = true; G.clock = G.len; G.half = 2; startShootout(); } keys.clear(); edge.dn.clear(); edge.up.clear();
   S.onEnd = () => { S.screen = 'end'; S.endRow = 0; Snd.crowd(0.1, 0.2); };
 }
@@ -2063,8 +2264,10 @@ function handleUI() {
       if (ok) pickOk();
       if (back) S.screen = 'versus';
     } else if (sc === 'help') { if (ok || back) S.screen = S.helpBack; }
+    else if (sc === 'intro') { if (ok) introSkip(); if (back) S.introT = INTRO_END; }
+    else if (sc === 'lineup') { if (left || right) { S.lineTeam = 1 - S.lineTeam; S.lineT = S.t; Snd.click(); } if (ok || back) S.screen = 'pause'; }
     else if (sc === 'pause') {
-      if (up) { S.pauseRow = (S.pauseRow + 3) % 4; Snd.click(); } if (down) { S.pauseRow = (S.pauseRow + 1) % 4; Snd.click(); }
+      const pn = PAUSE_ITEMS().length; if (up) { S.pauseRow = (S.pauseRow + pn - 1) % pn; Snd.click(); } if (down) { S.pauseRow = (S.pauseRow + 1) % pn; Snd.click(); }
       if (ok) pauseOk(); if (back || has('KeyP')) S.screen = 'play';
     } else if (sc === 'end') {
       if (left || right || up || down) { S.endRow = 1 - S.endRow; Snd.click(); } if (ok) endOk();
@@ -2078,7 +2281,7 @@ function render() {
   const sc = S.screen;
   if (sc === 'play') { drawWorld(); drawHUD(); }
   else if (sc === 'load') drawLoading(); else if (sc === 'title') drawTitle(); else if (sc === 'mode') drawMode(); else if (sc === 'versus') drawVersus(); else if (sc === 'pick') drawPick();
-  else if (sc === 'help') drawHelp(); else if (sc === 'pause') { drawWorld(); drawHUD(); drawPause(); } else if (sc === 'end') drawEnd();
+  else if (sc === 'help') drawHelp(); else if (sc === 'intro') drawIntro(); else if (sc === 'lineup') { drawWorld(); drawLineupView(); } else if (sc === 'pause') { drawWorld(); drawPause(); } else if (sc === 'end') drawEnd();
   S.hitsPrev = S.hits;
   cv.style.cursor = S.hits.some(h => inside(mouse.x, mouse.y, h)) ? 'pointer' : 'default';
 }
@@ -2098,7 +2301,8 @@ function frame(ts) {
   if (S.hint > 0 && S.screen === 'play') S.hint -= dt;
   pollPad();
   handleUI();
-  if (G && S.screen !== 'pause' && S.screen !== 'end' && !(S.screen === 'help' && S.helpBack === 'pause')) {
+  if (S.screen === 'intro' && G) introUpdate(dt);
+  if (G && S.screen !== 'intro' && S.screen !== 'lineup' && S.screen !== 'pause' && S.screen !== 'end' && !(S.screen === 'help' && S.helpBack === 'pause')) {
     acc += dt; let n = 0;
     while (acc >= DT && n++ < 5) { update(DT); edge.dn.clear(); edge.up.clear(); acc -= DT; }
     if (G.demo && G.ended) startDemo();
